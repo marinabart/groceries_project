@@ -25,4 +25,4 @@ products = [
 
 print(products)
 
-# code.interact(local=locals())
+code.interact(local=locals())
