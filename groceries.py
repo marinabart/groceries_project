@@ -26,9 +26,9 @@ products = [
 print("------------")
 print("THERE ARE " + str(len(products)) + " PRODUCTS:")
 
-len(products)
+import operator
 
-
+products = sorted(products, key=operator.itemgetter("name"))
 for product in products:
     print(" + " + product["name"])
 
