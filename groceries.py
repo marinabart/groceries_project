@@ -36,6 +36,25 @@ for product in products:
 
 
 
-
-
 # code.interact(local=locals())
+
+
+#
+# DEPARTMENTS
+#
+departments = []
+
+for product in products:
+    departments.append(product["department"])  # for each product, write the department to which it belongs
+
+departments = set(departments)   # removes duplicate values
+departments = list(departments)
+departments = sorted(departments)  # sorts list alphabetically
+
+
+print("---------------")   # print a lline ------ here
+
+print("THERE ARE " + str(len(departments)) + " DEPARTMENTS:")
+
+for department_name in departments:
+    print("+ " + department_name.title())
