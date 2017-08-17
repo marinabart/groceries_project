@@ -1,3 +1,5 @@
+# PRODUCTS
+
 import code
 
 products = [
@@ -36,9 +38,6 @@ for product in products:
 
 
 
-# code.interact(local=locals())
-
-
 #
 # DEPARTMENTS
 #
@@ -47,14 +46,17 @@ departments = []
 for product in products:
     departments.append(product["department"])  # for each product, write the department to which it belongs
 
-departments = set(departments)   # removes duplicate values
-departments = list(departments)
-departments = sorted(departments)  # sorts list alphabetically
+
+unique_departments = set(departments) # removing deuplicate values
+unique_departments = list(unique_departments)
+unique_departments = sorted(unique_departments)
+
+print("--------------")
+print("THERE ARE " + str(len(unique_departments)) + " DEPARTMENTS:")
+
+for department_name in unique_departments:
+    count_of_products = departments.count(department_name)
+    print(" + " + department_name.title() + " (" + str(count_of_products) + " products)")
 
 
-print("---------------")   # print a lline ------ here
-
-print("THERE ARE " + str(len(departments)) + " DEPARTMENTS:")
-
-for department_name in departments:
-    print("+ " + department_name.title())
+# code.interact(local=locals())
